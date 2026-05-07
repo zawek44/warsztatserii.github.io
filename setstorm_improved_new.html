@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SetStorm - trening personalny w Krakowie z Michałem &quot;Zawkiem&quot; Zawiślanem. Pakiety treningowe 4, 8 i 12 treningów miesięcznie w ZdroFit przy ul. Puszkarskiej 7G.">
+  <meta name="theme-color" content="#060606">
+  <meta property="og:title" content="SetStorm - Michał &quot;Zawek&quot; Zawiślan | Trener personalny Kraków">
+  <meta property="og:description" content="Trening oparty o system, ciężką pracę i realny plan działania. Umów bezpłatną konsultację stacjonarną.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/portret-2k.jpg">
+  <title>SetStorm - Michał "Zawek" Zawiślan | Trener Personalny Kraków</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --black:#060606;
+      --panel:#111312;
+      --panel-2:#181a18;
+      --line:#2c2d2a;
+      --white:#f7f4ed;
+      --muted:rgba(247,244,237,.62);
+      --soft:rgba(247,244,237,.42);
+      --gold:#c8a96e;
+      --green:#6f8f7b;
+      --danger:#d77b68;
+      --display:"Bebas Neue",Impact,sans-serif;
+      --cond:"Barlow Condensed",Arial,sans-serif;
+      --body:"Barlow",Arial,sans-serif;
+      --img-hero:url("assets/portret-2k.jpg");
+      --img-about:url("assets/setstorm-photos/about-portrait.png");
+      --img-method:url("assets/setstorm-photos/supersets-coaching.png");
+      --img-packages:url("assets/setstorm-photos/packages-bench.png");
+      --img-results:url("assets/setstorm-photos/results-detail.png");
+      --img-consultation:url("assets/setstorm-photos/consultation-talk.png");
+      --img-movement:url("assets/setstorm-photos/movement-assessment.png");
+      --img-decision:url("assets/setstorm-photos/decision-plan.png");
+      --img-contact:url("assets/setstorm-photos/contact-portrait.png");
+      --img-outdoor:url("assets/setstorm-photos/outdoor-lifestyle.png");
+    }
+    html{scroll-behavior:smooth}
+    body{background:var(--black);color:var(--white);font-family:var(--body);font-weight:300;line-height:1.6;overflow-x:hidden}
+    a{color:inherit}
+    .skip-link{position:absolute;left:-999px;top:1rem;background:var(--gold);color:#000;padding:.75rem 1rem;z-index:999}
+    .skip-link:focus{left:1rem}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;gap:2rem;padding:1rem clamp(1.25rem,4vw,4rem);background:rgba(6,6,6,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .nav-logo,.f-logo{font-family:var(--display);font-size:1.6rem;letter-spacing:.08em;color:var(--white);text-decoration:none;white-space:nowrap}
+    .nav-logo span,.f-logo span{color:var(--gold)}
+    .nav-links{display:flex;gap:2rem;list-style:none}
+    .nav-links a{font-family:var(--cond);font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--soft);font-weight:700;transition:color .15s}
+    .nav-links a:hover,.nav-links a:focus{color:var(--white)}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:44px;border:0;border-radius:0;background:var(--gold);color:#080808;text-decoration:none;font-family:var(--cond);font-size:.84rem;letter-spacing:.14em;text-transform:uppercase;padding:.8rem 1.45rem;font-weight:700;cursor:pointer;transition:background .15s,color .15s,border-color .15s,transform .15s}
+    .nav-cta:hover,.btn:hover{background:var(--white)}
+    .btn:active{transform:translateY(1px)}
+    .btn-secondary{background:transparent;color:var(--white);border:1px solid var(--line)}
+    .btn-secondary:hover{border-color:var(--white);background:transparent}
+    .hero{min-height:100svh;display:flex;align-items:flex-end;padding:8rem clamp(1.25rem,4vw,4rem) 5rem;position:relative;overflow:hidden;background:#050605}
+    .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(6,6,6,.9) 0%,rgba(6,6,6,.68) 34%,rgba(6,6,6,.14) 68%,rgba(6,6,6,.42) 100%),linear-gradient(0deg,rgba(6,6,6,.94) 0%,rgba(6,6,6,.18) 38%,rgba(6,6,6,.28) 100%),var(--img-hero);background-size:cover;background-position:center right;transform:scale(1.01)}
+    .hero-content{position:relative;z-index:2;max-width:760px}
+    .eyebrow,.sec-label{font-family:var(--cond);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:1rem}
+    .hero-headline{font-family:var(--display);font-size:clamp(5rem,13vw,12rem);line-height:.86;letter-spacing:.02em;color:var(--white);margin-bottom:1.35rem}
+    .stroke{-webkit-text-stroke:1.5px var(--white);color:transparent}
+    .yellow{color:var(--gold)}
+    .hero-sub{font-family:var(--cond);font-size:clamp(1rem,2vw,1.2rem);color:rgba(255,255,255,.72);max-width:470px;margin-bottom:2rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase}
+    .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+    .hero-stats{position:absolute;right:clamp(1.25rem,4vw,4rem);bottom:5rem;z-index:2;display:flex;gap:2.5rem}
+    .hstat{text-align:right}.hstat-n{font-family:var(--display);font-size:3.2rem;color:var(--gold);line-height:1}.hstat-l{font-family:var(--cond);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.48);font-weight:700}
+    .ticker{background:var(--gold);padding:.55rem 0;overflow:hidden;white-space:nowrap}.ticker-inner{display:inline-flex;animation:tickerMove 24s linear infinite}.ticker-item{font-family:var(--display);font-size:1rem;letter-spacing:.1em;color:#060606;padding:0 2.25rem}@keyframes tickerMove{to{transform:translateX(-50%)}}
+    section{padding:clamp(4.5rem,8vw,7rem) clamp(1.25rem,4vw,4rem);border-top:1px solid var(--line);position:relative;overflow:hidden}
+    section>*{position:relative;z-index:1}
+    .split{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,1fr);gap:clamp(2.5rem,6vw,6rem);align-items:start}
+    h2{font-family:var(--display);font-size:clamp(3.2rem,7vw,6rem);line-height:.9;letter-spacing:.02em}
+    .copy p{font-size:1rem;color:var(--muted);line-height:1.85;margin-bottom:1.1rem}.copy strong{color:var(--white);font-weight:600}.quote{font-family:var(--display);font-size:2.15rem;line-height:1.05;border-left:3px solid var(--gold);padding-left:1.3rem;margin-top:2.3rem}
+    .nums{display:flex;gap:1.8rem;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:2rem;margin-top:2.4rem}.num-n{font-family:var(--display);font-size:2.8rem;color:var(--gold);line-height:1}.num-l{font-family:var(--cond);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--soft);font-weight:700}
+    .band{background:var(--panel)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--line);margin-top:3rem}
+    .item{padding:2.3rem;border-right:1px solid var(--line);min-height:270px}.item:last-child{border-right:0}.item-num{font-family:var(--display);font-size:3.2rem;color:rgba(200,169,110,.32);line-height:1;margin-bottom:1.2rem}.item h3{font-family:var(--cond);font-size:1.18rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.8rem}.item p{font-size:.9rem;color:var(--soft);line-height:1.75}.results .item p{font-family:var(--cond);font-size:1.22rem;color:var(--white);line-height:1.55;font-weight:400;letter-spacing:.02em}.results .item h3{font-family:var(--body);font-size:.9rem;color:var(--soft);line-height:1.75;letter-spacing:0;text-transform:none;font-weight:300;margin-top:1.3rem;margin-bottom:0}
+    .services .item{position:relative;min-height:390px;padding-bottom:2.3rem;display:flex;flex-direction:column;transition:background .2s}.services .item:hover{background:var(--panel-2)}.services .featured{background:#15140f;box-shadow:inset 0 0 0 1px rgba(200,169,110,.45)}.services .item h3{font-family:var(--display);font-size:clamp(2.4rem,3.3vw,3.4rem);line-height:.92;letter-spacing:.03em;color:var(--white);margin-bottom:1rem}.services .item p{margin-bottom:2rem}.badge{position:absolute;top:2.3rem;right:2.3rem;display:inline-flex;border:1px solid rgba(200,169,110,.55);color:var(--gold);font-family:var(--cond);font-size:.64rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:.32rem .55rem}.featured .item-num{padding-right:8.5rem}.price{margin-top:auto;font-family:var(--cond);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700}.price span{font-family:var(--display);font-size:2rem;color:var(--white);display:block;line-height:1}.price small{display:block;margin-top:.45rem;color:var(--soft);font-size:.72rem;letter-spacing:.12em}.service-note{margin-top:1.6rem;color:var(--muted);font-size:.92rem;max-width:900px}
+    .micro{padding:5rem clamp(1.25rem,4vw,4rem);overflow:hidden}.micro-line{font-family:var(--display);line-height:.88;white-space:nowrap;letter-spacing:.02em}.micro-line:nth-child(1){font-size:clamp(4rem,10vw,9rem)}.micro-line:nth-child(2){font-size:clamp(3rem,7vw,7rem);-webkit-text-stroke:1px rgba(255,255,255,.22);color:transparent;padding-left:5%}.micro-line:nth-child(3){font-size:clamp(2.5rem,6vw,5.5rem);color:var(--gold);padding-left:18%}
+    .contact{background:var(--panel)}
+    .contact-options{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2rem}.contact-option{background:var(--panel);padding:1.4rem;text-decoration:none}.contact-option span{display:block;font-family:var(--cond);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:.35rem}.contact-option strong{display:block;font-family:var(--cond);font-size:1.05rem;font-weight:600;letter-spacing:.04em}.contact-option small{display:block;margin-top:.35rem;color:var(--soft);font-family:var(--body);font-size:.86rem;letter-spacing:0;text-transform:none;overflow-wrap:anywhere}.contact-option:hover{background:var(--panel-2)}.contact-option.instagram{background:#17140f}.contact-option.instagram strong{color:var(--gold)}
+    .form-wrap{background:#0d0e0d;border:1px solid var(--line);padding:clamp(1.25rem,3vw,2rem)}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.field{display:flex;flex-direction:column;gap:.45rem}.field.full{grid-column:1/-1}label{font-family:var(--cond);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}input,select,textarea{width:100%;background:#080908;border:1px solid var(--line);color:var(--white);font:400 1rem var(--body);padding:.9rem 1rem;border-radius:0;outline:0}textarea{min-height:115px;resize:vertical}input:focus,select:focus,textarea:focus{border-color:var(--gold)}.hint{font-size:.82rem;color:var(--soft);margin:.9rem 0 1.2rem}.form-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.25rem}.status{min-height:1.4rem;margin-top:1rem;color:var(--gold);font-size:.9rem}.invalid{border-color:var(--danger)!important}
+    #o-mnie::before,#filozofia::before,#uslugi::before,.results::before,#proces::before,.contact::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background-repeat:no-repeat;opacity:.23;filter:grayscale(.12) contrast(1.08) saturate(.82)}
+    #o-mnie::before{background-image:linear-gradient(90deg,rgba(6,6,6,1) 0%,rgba(6,6,6,.82) 46%,rgba(6,6,6,.26) 100%),var(--img-about);background-size:cover;background-position:center right;opacity:.2}
+    #filozofia::before{background-image:linear-gradient(90deg,rgba(17,19,18,1) 0%,rgba(17,19,18,.78) 52%,rgba(17,19,18,.18) 100%),var(--img-method);background-size:cover;background-position:center right}
+    #uslugi::before{background-image:linear-gradient(90deg,rgba(6,6,6,1) 0%,rgba(6,6,6,.88) 48%,rgba(6,6,6,.18) 100%),var(--img-packages);background-size:cover;background-position:center right}
+    .results::before{background-image:linear-gradient(90deg,rgba(17,19,18,1) 0%,rgba(17,19,18,.84) 50%,rgba(17,19,18,.22) 100%),var(--img-results);background-size:cover;background-position:center right}
+    #proces::before{background-image:linear-gradient(90deg,rgba(17,19,18,1) 0%,rgba(17,19,18,.82) 52%,rgba(17,19,18,.24) 100%),var(--img-consultation);background-size:cover;background-position:center right}
+    .contact::before{background-image:linear-gradient(90deg,rgba(17,19,18,1) 0%,rgba(17,19,18,.82) 48%,rgba(17,19,18,.16) 100%),var(--img-contact);background-size:cover;background-position:center right;opacity:.18}
+    #proces .item:nth-child(1){background-image:linear-gradient(rgba(17,19,18,.9),rgba(17,19,18,.95)),var(--img-consultation);background-size:cover;background-position:center}
+    #proces .item:nth-child(2){background-image:linear-gradient(rgba(17,19,18,.9),rgba(17,19,18,.95)),var(--img-movement);background-size:cover;background-position:center}
+    #proces .item:nth-child(3){background-image:linear-gradient(rgba(17,19,18,.9),rgba(17,19,18,.95)),var(--img-decision);background-size:cover;background-position:center}
+    .final-cta{background-color:var(--gold);background-image:linear-gradient(rgba(200,169,110,.92),rgba(200,169,110,.92)),var(--img-outdoor);background-size:cover;background-position:center;text-align:center;color:#080808}.final-cta h2{font-size:clamp(4rem,10vw,9rem);margin-bottom:1rem}.final-cta p{font-family:var(--cond);letter-spacing:.08em;text-transform:uppercase;color:rgba(0,0,0,.58);font-weight:600;margin-bottom:2rem}.final-cta .btn{background:#080808;color:var(--white)}.final-cta .btn:hover{background:#222}
+    footer{background:#101110;padding:2rem clamp(1.25rem,4vw,4rem);display:flex;justify-content:space-between;align-items:center;gap:1.5rem;border-top:1px solid var(--line);flex-wrap:wrap}footer p,footer a{font-family:var(--cond);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--soft);text-decoration:none}footer a{margin-left:1.4rem}footer a:hover{color:var(--white)}
+    .fade-up{opacity:0;transform:translateY(22px);transition:opacity .65s,transform .65s}.fade-up.visible{opacity:1;transform:translateY(0)}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ticker-inner{animation:none}.fade-up{opacity:1;transform:none;transition:none}}
+    @media (max-width:920px){.nav-links{display:none}.hero{min-height:92svh}.hero::before{background-position:62% center}.hero-stats{position:relative;right:auto;bottom:auto;margin-top:2.5rem}.split,.grid-3,.contact-options{grid-template-columns:1fr}.item,.item:last-child{border-right:0;border-bottom:1px solid var(--line)}.item:last-child{border-bottom:0}.form-grid{grid-template-columns:1fr}.price{position:static;margin-top:2rem}}
+    @media (max-width:560px){nav{padding:.85rem 1rem}.nav-cta{display:none}.hero{padding:7rem 1rem 3rem}.hero::before{background-position:66% center}.hero-headline{font-size:clamp(4.4rem,22vw,6rem)}.hero-actions .btn{width:100%}.hero-stats{gap:1.5rem}.hstat{text-align:left}section{padding:4.5rem 1rem}.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.num-n{font-size:2.25rem}.micro-line{white-space:normal}.contact-option{padding:1.15rem}.form-actions .btn{width:100%}footer a{margin-left:0;margin-right:1rem}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"SetStorm - Michał \"Zawek\" Zawiślan",
+    "description":"Trening personalny, pakiety treningowe, plany treningowe i konsultacje w Krakowie.",
+    "telephone":"+48535599713",
+    "email":"mi.zawislan@gmail.com",
+    "address":{"@type":"PostalAddress","streetAddress":"ul. Puszkarska 7G","addressLocality":"Kraków","addressCountry":"PL"},
+    "areaServed":"Kraków",
+    "url":"https://setstorm.pl"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#kontakt">Przejdź do kontaktu</a>
+  <nav aria-label="Główna nawigacja">
+    <a class="nav-logo" href="#top" aria-label="SetStorm">SET<span>STORM</span></a>
+    <ul class="nav-links">
+      <li><a href="#o-mnie">O mnie</a></li>
+      <li><a href="#filozofia">Filozofia</a></li>
+      <li><a href="#uslugi">Usługi</a></li>
+      <li><a href="https://www.instagram.com/zawek_personalny" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+    <a href="#kontakt" class="nav-cta">Konsultacja</a>
+  </nav>
+
+  <main id="top">
+    <section class="hero" aria-label="SetStorm">
+      <div class="hero-content fade-up">
+        <p class="eyebrow">Michał "Zawek" Zawiślan - trener personalny - Kraków</p>
+        <h1 class="hero-headline">ZBUDUJ<br><span class="stroke">TRWAŁY</span><br><span class="yellow">FUNDAMENT.</span></h1>
+        <p class="hero-sub">Formę buduje się cegła po cegle. Trening ma być ciężki, mądry i możliwy do utrzymania latami.</p>
+        <div class="hero-actions">
+          <a href="#kontakt" class="btn">Wypełnij kwestionariusz</a>
+          <a href="tel:+48535599713" class="btn btn-secondary">Zadzwoń</a>
+        </div>
+      </div>
+      <div class="hero-stats" aria-label="Doświadczenie">
+        <div class="hstat"><div class="hstat-n">12</div><div class="hstat-l">Lat treningu</div></div>
+        <div class="hstat"><div class="hstat-n">4</div><div class="hstat-l">Lata jako trener</div></div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-inner">
+        <span class="ticker-item">SETSTORM</span><span class="ticker-item">TRENING PERSONALNY</span><span class="ticker-item">SUPERSETS</span><span class="ticker-item">KRAKÓW</span><span class="ticker-item">ZDROFIT PUSZKARSKA</span><span class="ticker-item">MICHAŁ "ZAWEK" ZAWIŚLAN</span>
+        <span class="ticker-item">SETSTORM</span><span class="ticker-item">TRENING PERSONALNY</span><span class="ticker-item">SUPERSETS</span><span class="ticker-item">KRAKÓW</span><span class="ticker-item">ZDROFIT PUSZKARSKA</span><span class="ticker-item">MICHAŁ "ZAWEK" ZAWIŚLAN</span>
+      </div>
+    </div>
+
+    <section class="split" id="o-mnie">
+      <div class="fade-up">
+        <p class="sec-label">01 - Kim jestem</p>
+        <h2>KIM<br>JESTEM<br><span class="stroke">NAPRAWDĘ.</span></h2>
+        <div class="nums">
+          <div><div class="num-n">12</div><div class="num-l">Lat treningu</div></div>
+          <div><div class="num-n">4</div><div class="num-l">Lata jako trener</div></div>
+          <div><div class="num-n">29</div><div class="num-l">Lat. Zero ściemy.</div></div>
+        </div>
+      </div>
+      <div class="copy fade-up">
+        <p class="sec-label">SetStorm - ZdroFit, ul. Puszkarska 7G</p>
+        <p>Nie sprzedaję motywacji, bo motywacja znika po tygodniu. Buduję <strong>dyscyplinę, technikę i treningowy mindset</strong>, który pozwala wracać na salę nawet wtedy, gdy nie chce się ćwiczyć.</p>
+        <p>Od dziecka jestem związany ze sportem. Koszykówka, 12 lat treningu siłowego i funkcjonalnego, 4 lata pracy z klientami oraz certyfikacja REPs Polska nauczyły mnie jednego: ciało potrzebuje ruchu, ale ruch musi mieć sens.</p>
+        <p>Pracuję głównie z ludźmi 30+, którzy chcą zbudować ciało i głowę do treningu na lata. Nie boję się twoich kontuzji, oczekuję tylko gotowości do pracy: minimum raz w tygodniu, bez udawania, że lekki trening załatwi ciężki problem.</p>
+        <div class="quote">Formę buduje się cegła po cegle.</div>
+      </div>
+    </section>
+
+    <section class="band" id="filozofia">
+      <p class="sec-label">02 - Filozofia treningu</p>
+      <h2 class="fade-up">SUPERSETS.<br><span class="stroke">SYSTEM.</span><br><span class="yellow">WYNIKI.</span></h2>
+      <div class="grid-3">
+        <article class="item fade-up"><div class="item-num">01</div><h3>Superserie</h3><p>Dwa ćwiczenia wykonywane kolejno na osobne partie mięśniowe. Mniej przestojów, więcej pracy i mocniejszy bodziec dla całego ciała.</p></article>
+        <article class="item fade-up"><div class="item-num">02</div><h3>Burza serii</h3><p>SetStorm to trening, w którym serie są ułożone tak, żeby ciało pracowało konkretnie: siła, kondycja, technika i kontrola ruchu.</p></article>
+        <article class="item fade-up"><div class="item-num">03</div><h3>Trwałość</h3><p>Najlepszy plan to ten, który wykonujesz przez rok - nie ten idealny na papierze. Dlatego buduję trening wokół ciebie, nie wokół trendu.</p></article>
+      </div>
+    </section>
+
+    <section class="services" id="uslugi">
+      <p class="sec-label">03 - Pakiety</p>
+      <h2 class="fade-up">WYBIERZ<br><span class="stroke">RYTM</span><br>TRENINGU.</h2>
+      <div class="grid-3">
+        <article class="item fade-up"><div class="item-num">01</div><h3>START<br>4 TRENINGI</h3><p>1 raz w tygodniu. Minimum, które pozwala ruszyć technikę, dyscyplinę i regularność. Dobre wejście po przerwie.</p><div class="price"><span>160 zł</span> za trening<small>640 zł / miesiąc</small></div></article>
+        <article class="item fade-up featured"><div class="badge">Najczęściej wybierany</div><div class="item-num">02</div><h3>STANDARD<br>8 TRENINGÓW</h3><p>2 razy w tygodniu. Najlepsza proporcja pracy do regeneracji dla budowania sylwetki, siły i treningowego mindsetu.</p><div class="price"><span>140 zł</span> za trening<small>1120 zł / miesiąc</small></div></article>
+        <article class="item fade-up"><div class="item-num">03</div><h3>INTENSYWNY<br>12 TRENINGÓW</h3><p>3 razy w tygodniu. Dla osób, które chcą mocnego tempa, częstszej korekty techniki i większej odpowiedzialności za proces.</p><div class="price"><span>125 zł</span> za trening<small>1500 zł / miesiąc</small></div></article>
+      </div>
+      <p class="service-note">Pojedynczy trening 60 min: 180 zł. Pierwsza konsultacja stacjonarna 30-50 min jest bezpłatna. Dodatkowo: plan treningowy na 8 tygodni 300 zł, konsultacja online 120 zł.</p>
+    </section>
+
+    <section class="band results">
+      <p class="sec-label">04 - Efekty klientów</p>
+      <h2 class="fade-up">KONKRET<br>Z SALI,<br>NIE HASŁA.</h2>
+      <div class="grid-3">
+        <article class="item fade-up"><div class="item-num">-10</div><p>10 kg mniej w 8 miesięcy. Bez magii, bez gwałtownego zrywu. Regularny trening, kontrola procesu i cierpliwość.</p><h3>Krystian</h3></article>
+        <article class="item fade-up"><div class="item-num">01</div><p>Pierwsza pompka po 6 miesiącach. Najpierw fundament, zakresy ruchu i siła bazowa, potem efekt, który widać.</p><h3>Kamila</h3></article>
+        <article class="item fade-up"><div class="item-num">10K</div><p>Bieganie 10 km dla funu. Trening nie kończy się na siłowni, jeśli ciało zaczyna działać lepiej w życiu.</p><h3>Darek</h3></article>
+      </div>
+    </section>
+
+    <section class="micro" aria-hidden="true">
+      <div class="micro-line">Ale lekkie.</div>
+      <div class="micro-line">Jeszcze jedno powtórzenie.</div>
+      <div class="micro-line">Dołożymy ciężaru.</div>
+    </section>
+
+    <section class="band" id="proces">
+      <p class="sec-label">05 - Pierwsza konsultacja</p>
+      <h2 class="fade-up">NAJPIERW<br><span class="stroke">DIAGNOZA.</span><br>POTEM PLAN.</h2>
+      <div class="grid-3">
+        <article class="item fade-up"><div class="item-num">01</div><h3>Rozmowa</h3><p>Spotykamy się w ZdroFit. Pytam o pracę, codzienny ruch, kontuzje, operacje, zdrowie, czas w tygodniu oraz cel główny i pierwszy cel po drodze.</p></article>
+        <article class="item fade-up"><div class="item-num">02</div><h3>Analiza ruchu</h3><p>Sprawdzamy zakresy ruchu w stawach i technikę podstawowych ćwiczeń. To pokazuje, od czego naprawdę trzeba zacząć.</p></article>
+        <article class="item fade-up"><div class="item-num">03</div><h3>Decyzja</h3><p>Na koniec dostajesz podsumowanie, sugestię celu podrzędnego i propozycję pakietu. Główny cel treningu zostaje twoją decyzją.</p></article>
+      </div>
+    </section>
+
+    <section class="contact split" id="kontakt">
+      <div class="fade-up">
+        <p class="sec-label">06 - Kontakt</p>
+        <h2>ZACZNIJ<br>OD<br><span class="yellow">KONKRETU.</span></h2>
+        <p class="hero-sub">Najpierw wyślij krótki kontekst. Odpowiadam w ciągu 24 godzin i proponuję najbliższy krok.</p>
+        <div class="contact-options">
+          <a class="contact-option" href="https://wa.me/48535599713" target="_blank" rel="noopener"><span>Priorytet</span><strong>WhatsApp</strong><small>+48 535 599 713</small></a>
+          <a class="contact-option" href="tel:+48535599713"><span>Szybko</span><strong>Telefon</strong><small>+48 535 599 713</small></a>
+          <a class="contact-option" href="mailto:mi.zawislan@gmail.com"><span>Formalnie</span><strong>Email</strong><small>mi.zawislan@gmail.com</small></a>
+          <a class="contact-option instagram" href="https://www.instagram.com/zawek_personalny" target="_blank" rel="noopener"><span>Social</span><strong>Instagram</strong><small>@zawek_personalny</small></a>
+        </div>
+      </div>
+      <form class="form-wrap fade-up" id="consultationForm" novalidate>
+        <div class="form-grid">
+          <div class="field"><label for="name">Imię</label><input id="name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="phone">Telefon</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div>
+          <div class="field"><label for="goal">Główny cel</label><select id="goal" name="goal" required><option value="">Wybierz</option><option>Redukcja tkanki tłuszczowej</option><option>Budowa mięśni</option><option>Powrót po przerwie</option><option>Technika i siła</option><option>Plan treningowy</option></select></div>
+          <div class="field"><label for="mode">Forma współpracy</label><select id="mode" name="mode" required><option value="">Wybierz</option><option>Pakiet 4 treningi / miesiąc</option><option>Pakiet 8 treningów / miesiąc</option><option>Pakiet 12 treningów / miesiąc</option><option>Pojedynczy trening</option><option>Plan treningowy 8 tygodni</option><option>Konsultacja online</option><option>Nie wiem - chcę dobrać opcję</option></select></div>
+          <div class="field"><label for="experience">Doświadczenie</label><select id="experience" name="experience" required><option value="">Wybierz</option><option>Zaczynam od zera</option><option>Trenuję nieregularnie</option><option>Trenuję regularnie 6+ miesięcy</option><option>Trenuję kilka lat</option></select></div>
+          <div class="field"><label for="availability">Dostępność</label><input id="availability" name="availability" placeholder="np. wt/czw po 18:00" required></div>
+          <div class="field full"><label for="injuries">Kontuzje lub ograniczenia</label><input id="injuries" name="injuries" placeholder="np. kolano, plecy, bark albo brak"></div>
+          <div class="field full"><label for="message">Co mam wiedzieć przed kontaktem?</label><textarea id="message" name="message" placeholder="Napisz krótko, z czym startujesz i czego oczekujesz."></textarea></div>
+        </div>
+        <p class="hint">Formularz przygotuje gotową wiadomość. Najszybsza ścieżka to WhatsApp, a email zostaje jako kopia awaryjna.</p>
+        <div class="form-actions">
+          <button class="btn" type="submit">Wyślij przez WhatsApp</button>
+          <button class="btn btn-secondary" type="button" id="emailFallback">Wyślij emailem</button>
+        </div>
+        <p class="status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="final-cta">
+      <p>Jedna konsultacja. Bez zobowiązań. Konkretna rozmowa.</p>
+      <h2 class="fade-up">CZAS<br><span class="stroke">ZACZĄĆ</span><br>DZIAŁAĆ.</h2>
+      <a href="#kontakt" class="btn">Przejdź do kwestionariusza</a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="f-logo" href="#top">SET<span>STORM</span></a>
+    <p>© 2026 Michał "Zawek" Zawiślan · ZdroFit Puszkarska 7G</p>
+    <div>
+      <a href="https://www.instagram.com/zawek_personalny" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:mi.zawislan@gmail.com">Email</a>
+    </div>
+  </footer>
+
+  <script>
+    const PHONE = "48535599713";
+    const EMAIL = "mi.zawislan@gmail.com";
+    const form = document.getElementById("consultationForm");
+    const statusEl = document.getElementById("formStatus");
+    const fields = [...form.querySelectorAll("input, select, textarea")];
+
+    const obs = "IntersectionObserver" in window ? new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add("visible");
+          obs.unobserve(entry.target);
+        }
+      });
+    },{threshold:.12}) : null;
+    document.querySelectorAll(".fade-up").forEach(el => obs ? obs.observe(el) : el.classList.add("visible"));
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", event => {
+        const target = document.querySelector(anchor.getAttribute("href"));
+        if(target){
+          event.preventDefault();
+          target.scrollIntoView({behavior:"smooth", block:"start"});
+        }
+      });
+    });
+
+    const savedDraft = localStorage.getItem("setstormConsultationDraft");
+    if(savedDraft){
+      try{
+        const data = JSON.parse(savedDraft);
+        fields.forEach(field => {
+          if(data[field.name]) field.value = data[field.name];
+        });
+      }catch(_){}
+    }
+    fields.forEach(field => field.addEventListener("input", () => {
+      const data = Object.fromEntries(new FormData(form).entries());
+      localStorage.setItem("setstormConsultationDraft", JSON.stringify(data));
+      field.classList.remove("invalid");
+    }));
+
+    function validateForm(){
+      let valid = true;
+      form.querySelectorAll("[required]").forEach(field => {
+        const ok = field.value.trim().length > 0;
+        field.classList.toggle("invalid", !ok);
+        valid = valid && ok;
+      });
+      if(!valid) statusEl.textContent = "Uzupełnij wymagane pola, żebym mógł szybko odpowiedzieć.";
+      return valid;
+    }
+
+    function buildMessage(){
+      const data = Object.fromEntries(new FormData(form).entries());
+      return [
+        "Cześć Michał, chcę umówić konsultację SetStorm.",
+        "",
+        `Imię: ${data.name}`,
+        `Telefon: ${data.phone}`,
+        `Cel: ${data.goal}`,
+        `Forma współpracy: ${data.mode}`,
+        `Doświadczenie: ${data.experience}`,
+        `Dostępność: ${data.availability}`,
+        `Kontuzje/ograniczenia: ${data.injuries || "brak informacji"}`,
+        `Dodatkowy kontekst: ${data.message || "brak"}`,
+        "",
+        "Wiem, że pierwsza konsultacja stacjonarna jest bezpłatna i odpowiedź dostanę w ciągu 24h."
+      ].join("\n");
+    }
+
+    form.addEventListener("submit", event => {
+      event.preventDefault();
+      if(!validateForm()) return;
+      const url = `https://wa.me/${PHONE}?text=${encodeURIComponent(buildMessage())}`;
+      localStorage.removeItem("setstormConsultationDraft");
+      statusEl.textContent = "Otwieram WhatsApp z gotową wiadomością.";
+      window.open(url, "_blank", "noopener");
+    });
+
+    document.getElementById("emailFallback").addEventListener("click", () => {
+      if(!validateForm()) return;
+      const subject = encodeURIComponent("Konsultacja SetStorm");
+      const body = encodeURIComponent(buildMessage());
+      window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
