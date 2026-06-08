@@ -32,15 +32,15 @@
       --display:"Bebas Neue",Impact,sans-serif;
       --cond:"Barlow Condensed",Arial,sans-serif;
       --body:"Barlow",Arial,sans-serif;
-      --img-hero:url("assets/michal-zawek-zawislan-trener-personalny-krakow.webp");
-      --img-about:url("assets/warsztat-serii-zdjecia/michal-zawek-zawislan-trener-personalny-krakow-portret.webp");
-      --img-method:url("assets/warsztat-serii-zdjecia/superserie-trening-personalny-krakow-zdrofit.webp");
-      --img-packages:url("assets/warsztat-serii-zdjecia/pakiety-trening-personalny-krakow-zdrofit.webp");
-      --img-results:url("assets/warsztat-serii-zdjecia/analiza-ruchu-trening-personalny-krakow-zdrofit.webp");
+      --img-hero:url("assets/michal-zawek-zawislan-trener-personalny-krakow-hero-enhanced.webp");
+      --img-about:url("assets/warsztat_serii_zdj/michal-zawislan-trener-personalny-zdrofit-krakow.png");
+      --img-method:url("assets/warsztat_serii_zdj/asekuracja-trening-personalny-krakow-zdrofit.png");
+      --img-packages:url("assets/warsztat_serii_zdj/detal-obciazenia-trening-silowy-krakow-zdrofit.png");
+      --img-results:url("assets/warsztat_serii_zdj/efekty-klienta-trening-personalny-krakow-zdrofit-web.webp");
       --img-consultation:url("assets/warsztat-serii-zdjecia/bezplatna-konsultacja-trening-personalny-krakow.webp");
-      --img-movement:url("assets/warsztat-serii-zdjecia/analiza-ruchu-trening-personalny-krakow-zdrofit.webp");
+      --img-movement:url("assets/warsztat_serii_zdj/analiza-techniki-trening-personalny-krakow-zdrofit.png");
       --img-decision:url("assets/warsztat-serii-zdjecia/plan-treningowy-warsztat-serii-krakow.webp");
-      --img-contact:url("assets/warsztat-serii-zdjecia/michal-zawek-zawislan-kontakt-trener-personalny-krakow.webp");
+      --img-contact:url("assets/warsztat_serii_zdj/michal-zawislan-trener-personalny-zdrofit-krakow.png");
       --img-outdoor:url("assets/warsztat-serii-zdjecia/trener-personalny-krakow-gory-forma-warsztat-serii.webp");
     }
     html{scroll-behavior:smooth}
@@ -73,7 +73,7 @@
     .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
     .hero-stats{position:absolute;right:clamp(1.25rem,4vw,4rem);bottom:5rem;z-index:2;display:flex;gap:2.5rem}
     .hstat{text-align:right}.hstat-n{font-family:var(--display);font-size:3.2rem;color:var(--gold);line-height:1}.hstat-l{font-family:var(--cond);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.48);font-weight:700}
-    .ticker{background:var(--gold);padding:.55rem 0;overflow:hidden;white-space:nowrap}.ticker-inner{display:inline-flex;animation:tickerMove 24s linear infinite}.ticker-item{font-family:var(--display);font-size:1rem;letter-spacing:.1em;color:#060606;padding:0 2.25rem}@keyframes tickerMove{to{transform:translateX(-50%)}}
+    .ticker{background:var(--gold);padding:.55rem 0;overflow:hidden;white-space:nowrap}.ticker-inner{display:flex;width:max-content;min-width:max-content;animation:tickerMove 32s linear infinite;will-change:transform}.ticker-item{flex:0 0 auto;font-family:var(--display);font-size:1rem;letter-spacing:.1em;color:#060606;padding:0 2.25rem}@keyframes tickerMove{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
     section{padding:clamp(4.5rem,8vw,7rem) clamp(1.25rem,4vw,4rem);border-top:1px solid var(--line);position:relative;overflow:hidden}
     section>*{position:relative;z-index:1}
     .split{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,1fr);gap:clamp(2.5rem,6vw,6rem);align-items:start}
@@ -90,15 +90,15 @@
     .contact-options{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2rem}.contact-option{background:var(--panel);padding:1.4rem;text-decoration:none}.contact-option span{display:block;font-family:var(--cond);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:.35rem}.contact-option strong{display:block;font-family:var(--cond);font-size:1.05rem;font-weight:600;letter-spacing:.04em}.contact-option small{display:block;margin-top:.35rem;color:var(--soft);font-family:var(--body);font-size:.86rem;letter-spacing:0;text-transform:none;overflow-wrap:anywhere}.contact-option:hover{background:var(--panel-2)}.contact-option.instagram{background:#17140f}.contact-option.instagram strong,.contact-option.google strong{color:var(--gold)}
     .form-wrap{background:#0d0e0d;border:1px solid var(--line);padding:clamp(1.25rem,3vw,2rem)}
     .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.field{display:flex;flex-direction:column;gap:.45rem}.field.full{grid-column:1/-1}label{font-family:var(--cond);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}input,select,textarea{width:100%;background:#080908;border:1px solid var(--line);color:var(--white);font:400 1rem var(--body);padding:.9rem 1rem;border-radius:0;outline:0}textarea{min-height:115px;resize:vertical}input:focus,select:focus,textarea:focus{border-color:var(--gold)}.hint{font-size:.82rem;color:var(--soft);margin:.9rem 0 1.2rem}.form-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.25rem}.status{min-height:1.4rem;margin-top:1rem;color:var(--gold);font-size:.9rem}.invalid{border-color:var(--danger)!important}
-    .gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:3rem}.gallery-grid figure{background:var(--panel)}.gallery-grid img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}.gallery-grid figcaption{padding:1rem 1.1rem;color:var(--muted);font-size:.88rem;line-height:1.55}
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:3rem}.gallery-grid figure{background:var(--panel)}.gallery-grid img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}.gallery-grid img.crop-top{object-position:center 18%}.gallery-grid img.crop-upper{object-position:center 28%}.gallery-grid img.crop-lower{object-position:center 68%}.gallery-grid figcaption{padding:1rem 1.1rem;color:var(--muted);font-size:.88rem;line-height:1.55}
     .faq-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:3rem}.faq-list details{background:var(--panel);padding:1.35rem}.faq-list summary{cursor:pointer;font-family:var(--cond);font-size:1.05rem;font-weight:700;letter-spacing:.04em;color:var(--white)}.faq-list p{padding-top:.8rem;color:var(--muted);font-size:.94rem;line-height:1.75}
     #o-mnie::before,#filozofia::before,#uslugi::before,.results::before,#proces::before,.contact::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background-repeat:no-repeat;opacity:.23;filter:grayscale(.12) contrast(1.08) saturate(.82)}
-    #o-mnie::before{background-image:linear-gradient(90deg,rgba(6,6,6,1) 0%,rgba(6,6,6,.82) 46%,rgba(6,6,6,.26) 100%),var(--img-about);background-size:cover;background-position:center right;opacity:.2}
-    #filozofia::before{background-image:linear-gradient(90deg,rgba(17,19,18,1) 0%,rgba(17,19,18,.78) 52%,rgba(17,19,18,.18) 100%),var(--img-method);background-size:cover;background-position:center right}
-    #uslugi::before{background-image:linear-gradient(90deg,rgba(6,6,6,1) 0%,rgba(6,6,6,.88) 48%,rgba(6,6,6,.18) 100%),var(--img-packages);background-size:cover;background-position:center right}
-    .results::before{background-image:linear-gradient(90deg,rgba(17,19,18,1) 0%,rgba(17,19,18,.84) 50%,rgba(17,19,18,.22) 100%),var(--img-results);background-size:cover;background-position:center right}
+    #o-mnie::before{background-image:linear-gradient(90deg,rgba(6,6,6,.96) 0%,rgba(6,6,6,.74) 46%,rgba(6,6,6,.16) 100%),var(--img-about);background-size:cover;background-position:center 16%;opacity:.24}
+    #filozofia::before{background-image:linear-gradient(90deg,rgba(17,19,18,1) 0%,rgba(17,19,18,.9) 52%,rgba(17,19,18,.38) 100%),var(--img-method);background-size:cover;background-position:center 18%}
+    #uslugi::before{background-image:linear-gradient(90deg,rgba(6,6,6,.96) 0%,rgba(6,6,6,.8) 48%,rgba(6,6,6,.1) 100%),var(--img-packages);background-size:cover;background-position:center right}
+    .results::before{background-image:linear-gradient(90deg,rgba(17,19,18,1) 0%,rgba(17,19,18,.76) 50%,rgba(17,19,18,.08) 100%),var(--img-results);background-size:cover;background-position:center 20%}
     #proces::before{background-image:linear-gradient(90deg,rgba(17,19,18,1) 0%,rgba(17,19,18,.82) 52%,rgba(17,19,18,.24) 100%),var(--img-consultation);background-size:cover;background-position:center right}
-    .contact::before{background-image:linear-gradient(90deg,rgba(17,19,18,1) 0%,rgba(17,19,18,.82) 48%,rgba(17,19,18,.16) 100%),var(--img-contact);background-size:cover;background-position:center right;opacity:.18}
+    .contact::before{background-image:linear-gradient(90deg,rgba(17,19,18,1) 0%,rgba(17,19,18,.82) 48%,rgba(17,19,18,.16) 100%),var(--img-contact);background-size:cover;background-position:center 18%;opacity:.18}
     #proces .item:nth-child(1){background-image:linear-gradient(rgba(17,19,18,.9),rgba(17,19,18,.95)),var(--img-consultation);background-size:cover;background-position:center}
     #proces .item:nth-child(2){background-image:linear-gradient(rgba(17,19,18,.9),rgba(17,19,18,.95)),var(--img-movement);background-size:cover;background-position:center}
     #proces .item:nth-child(3){background-image:linear-gradient(rgba(17,19,18,.9),rgba(17,19,18,.95)),var(--img-decision);background-size:cover;background-position:center}
@@ -205,6 +205,8 @@
       <div class="ticker-inner">
         <span class="ticker-item">WARSZTAT SERII</span><span class="ticker-item">TRENING PERSONALNY</span><span class="ticker-item">SUPERSETS</span><span class="ticker-item">KRAKÓW</span><span class="ticker-item">ZDROFIT PUSZKARSKA</span><span class="ticker-item">MICHAŁ "ZAWEK" ZAWIŚLAN</span>
         <span class="ticker-item">WARSZTAT SERII</span><span class="ticker-item">TRENING PERSONALNY</span><span class="ticker-item">SUPERSETS</span><span class="ticker-item">KRAKÓW</span><span class="ticker-item">ZDROFIT PUSZKARSKA</span><span class="ticker-item">MICHAŁ "ZAWEK" ZAWIŚLAN</span>
+        <span class="ticker-item">WARSZTAT SERII</span><span class="ticker-item">TRENING PERSONALNY</span><span class="ticker-item">SUPERSETS</span><span class="ticker-item">KRAKÓW</span><span class="ticker-item">ZDROFIT PUSZKARSKA</span><span class="ticker-item">MICHAŁ "ZAWEK" ZAWIŚLAN</span>
+        <span class="ticker-item">WARSZTAT SERII</span><span class="ticker-item">TRENING PERSONALNY</span><span class="ticker-item">SUPERSETS</span><span class="ticker-item">KRAKÓW</span><span class="ticker-item">ZDROFIT PUSZKARSKA</span><span class="ticker-item">MICHAŁ "ZAWEK" ZAWIŚLAN</span>
       </div>
     </div>
 
@@ -231,7 +233,7 @@
         </div>
       </div>
       <div class="copy fade-up">
-        <p class="sec-label">Warsztat Serii - Michał Zawiślan - ZDROFIT, ul. Puszkarska 7G</p>
+        <p class="sec-label">Michał Zawiślan - Warsztat Serii - ZDROFIT, ul. Puszkarska 7G</p>
         <p>Nie sprzedaję motywacji, bo motywacja znika po tygodniu. Buduję <strong>dyscyplinę, technikę i treningowy mindset</strong>, który pozwala wracać na salę nawet wtedy, gdy nie chce się ćwiczyć.</p>
         <p>Od dziecka jestem związany ze sportem. Koszykówka, 12 lat treningu siłowego i funkcjonalnego, 4 lata pracy z klientami oraz liczne szkolenia nauczyły mnie jednego: ciało potrzebuje ruchu, ale ruch musi mieć sens.</p>
         <p>Pracuję głównie z ludźmi 30+, którzy chcą zbudować ciało i głowę do treningu na lata. Nie boję się twoich kontuzji, oczekuję tylko gotowości do pracy: minimum raz w tygodniu, bez udawania, że lekki trening załatwi ciężki problem.</p>
@@ -291,16 +293,16 @@
       <h2 class="fade-up">PRACA<br><span class="stroke">ZACZYNA SIĘ</span><br>OD PODSTAW.</h2>
       <div class="gallery-grid">
         <figure class="fade-up">
-          <img src="assets/warsztat-serii-zdjecia/bezplatna-konsultacja-trening-personalny-krakow.webp" width="1800" height="1013" loading="lazy" decoding="async" alt="Bezpłatna konsultacja z trenerem personalnym w Krakowie przed rozpoczęciem współpracy">
-          <figcaption>Pierwsza konsultacja: rozmowa o celu, zdrowiu, codziennym ruchu i czasie, który realnie możesz przeznaczyć na trening.</figcaption>
+          <img class="crop-upper" src="assets/warsztat_serii_zdj/analiza-techniki-trening-personalny-krakow-zdrofit.png" width="1122" height="1402" loading="lazy" decoding="async" alt="Analiza techniki ćwiczenia podczas treningu personalnego w klubie ZDROFIT Kraków">
+          <figcaption>Analiza techniki: najpierw ustawiamy pozycję, zakres ruchu i kontrolę, zanim dokładamy większą intensywność.</figcaption>
         </figure>
         <figure class="fade-up">
-          <img src="assets/warsztat-serii-zdjecia/analiza-ruchu-trening-personalny-krakow-zdrofit.webp" width="1800" height="1013" loading="lazy" decoding="async" alt="Analiza ruchu i techniki ćwiczeń podczas treningu personalnego w klubie ZDROFIT Kraków">
-          <figcaption>Analiza ruchu: sprawdzamy zakresy w stawach i technikę podstawowych ćwiczeń, zanim zwiększymy intensywność.</figcaption>
+          <img class="crop-top" src="assets/warsztat_serii_zdj/asekuracja-trening-personalny-krakow-zdrofit.png" width="1122" height="1402" loading="lazy" decoding="async" alt="Asekuracja klienta podczas treningu personalnego w Krakowie">
+          <figcaption>Asekuracja: technika i bezpieczeństwo są częścią treningu, nie dodatkiem na końcu.</figcaption>
         </figure>
         <figure class="fade-up">
-          <img src="assets/warsztat-serii-zdjecia/superserie-trening-personalny-krakow-zdrofit.webp" width="1800" height="1013" loading="lazy" decoding="async" alt="Trening personalny metodą superserii w Krakowie">
-          <figcaption>Superserie i trening hybrydowy: konkretna praca nad siłą, wytrzymałością i sprawnością.</figcaption>
+          <img class="crop-lower" src="assets/warsztat_serii_zdj/cwiczenia-core-trening-personalny-krakow-zdrofit.jpeg" width="1122" height="1402" loading="lazy" decoding="async" alt="Ćwiczenie core jako element podstaw treningu personalnego w Krakowie">
+          <figcaption>Podstawy: stabilizacja, kontrola tułowia i świadomy ruch robią różnicę w kolejnych ćwiczeniach.</figcaption>
         </figure>
       </div>
     </section>
@@ -360,7 +362,7 @@
 
   <footer>
     <a class="f-logo" href="#top">WARSZTAT <span>SERII</span></a>
-    <p>© 2026 Michał "Zawek" Zawiślan · ZDROFIT Puszkarska 7G · aktualizacja: <time datetime="2026-06-02">2 czerwca 2026</time></p>
+    <p>© 2026 Michał "Zawek" Zawiślan · ZDROFIT Puszkarska 7G</p>
     <div>
       <a href="https://www.instagram.com/zawek_personalny" target="_blank" rel="noopener">Instagram</a>
       <a href="mailto:mi.zawislan@gmail.com">Email</a>
